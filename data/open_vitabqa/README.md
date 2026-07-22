@@ -1,49 +1,51 @@
-# Open-ViTabQA: A Novel Benchmark for Vietnamese Question Answering on Open Domains Wikipedia Table
+# Open-ViTabQA: A Novel Benchmark for Vietnamese Question Answering on Open-Domain Wikipedia Tables
 
-## Provenance
+## Source and license
 
-This snapshot is redistributed from
-[`DuzDao/Open-ViTabQA`](https://github.com/DuzDao/Open-ViTabQA) at commit
-`3e027061117d2c98e6131034f91f48c75165fd71` under the MIT License included in
-this directory. The repository migration verified the four JSON files against
-that pinned upstream commit before publication.
+The dataset in this directory is distributed by
+[`DuzDao/Open-ViTabQA`](https://github.com/DuzDao/Open-ViTabQA) under the MIT
+License included in this directory.
 
-Open-ViTabQA is the first publicly available dataset for Vietnamese Table Question Answering (TQA). It is designed to benchmark the performance of language models, particularly Large Language Models (LLMs), on understanding and answering questions posed on Vietnamese Wikipedia tables.
+Open-ViTabQA is a public dataset for Vietnamese table question answering. It is
+designed to benchmark language models, including large language models, on
+understanding and answering questions grounded in Vietnamese Wikipedia tables.
 
-## Motivation and Background
+## Motivation
 
-Tabular data is a rich source of information, and automated information extraction from tables is a crucial task in Natural Language Processing (NLP).  However, existing TQA resources are predominantly in English, with limited availability for low-resource languages like Vietnamese.  Vietnamese TQA presents unique challenges due to the language's complex word segmentation, diverse syntactic structures, and the prevalence of implicit information, making it difficult to directly apply models trained on English TQA datasets. Open-ViTabQA addresses this gap by providing a benchmark dataset for evaluating and advancing Vietnamese TQA research.
+Tabular data is a rich source of information, and automated information
+extraction from tables is an important natural language processing task. Most
+table question-answering resources focus on English. Open-ViTabQA provides a
+Vietnamese benchmark that captures challenges such as word segmentation,
+diverse syntax, implicit information, and irregular table structures.
 
-## Data Structure
+## Data structure
 
-Each instance in Open-ViTabQA consists of:
+Each question-answer record contains:
 
-QAs data
-| Field        | Description                                   |
-|--------------|-----------------------------------------------|
-| `qa_id`      | Unique identifier for the qa pair             |
-| `table_id`   | Unique identifier for the table               |
-| `question`   | Question                                      |
-| `answer`     | Answer                                        |
-| `hints`      | List of question type                         |
+| Field | Description |
+|---|---|
+| `qa_id` | Unique question-answer identifier |
+| `table_id` | Identifier of the associated table |
+| `question` | Vietnamese question |
+| `answer` | Reference answer |
+| `hints` | Question-type annotations |
 
-Tables data
-| Field        | Description                                   |
-|--------------|-----------------------------------------------|
-| `table_id`   | Unique identifier for the table               |
-| `table_html` | Table data in HTML format                     |
-| `table_title`| Title of table                                |
-| `table_domain`| Domain of table                              |
-| `table_type` | List of types (normal|contain_merged_header|contain_merged_value)                              |
-| `table_dict` | Flattened table (List of table rows) |
+Each table record contains:
 
-
+| Field | Description |
+|---|---|
+| `table_id` | Unique table identifier |
+| `table_html` | Table content in HTML format |
+| `table_title` | Table title |
+| `table_domain` | Table domain |
+| `table_type` | Structure labels such as `normal`, `contain_merged_header`, or `contain_merged_value` |
+| `table_dict` | Flattened table rows |
 
 ## Citation
 
-Please cite the Open-ViTabQA paper and the upstream dataset repository when
-using these files. See the root project README for the current citation entry.
+When using these files, cite the Open-ViTabQA paper and dataset repository. The
+complete citation is available in the root project README.
 
 ## Contact
-If you have any further questions, please contact us at the following email:
-21521972@gm.uit.edu.vn
+
+For dataset questions, contact `21521972@gm.uit.edu.vn`.

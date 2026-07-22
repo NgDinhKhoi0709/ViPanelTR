@@ -684,7 +684,7 @@ def cmd_evaluate(args: argparse.Namespace) -> int:
             data = json.loads(content)
             predictions = data
         else:
-            # JSONL (legacy): one JSON object per line
+            # JSONL: one JSON object per line
             for line in content.split("\n"):
                 line = line.strip()
                 if line:

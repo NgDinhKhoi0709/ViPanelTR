@@ -202,7 +202,7 @@ class PeerReviewOutput:
     # Timing
     total_latency_ms: float = 0.0
     
-    # Legacy compatibility fields
+    # Consensus metadata
     vote_summary: Dict[str, Any] = field(default_factory=dict)
     
     def to_dict(self) -> Dict[str, Any]:
