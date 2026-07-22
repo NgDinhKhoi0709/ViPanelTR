@@ -1,0 +1,38 @@
+[project]
+name = "vipaneltr"
+version = "1.0.0"
+description = "Multi-agent reasoning and evaluation for Vietnamese Table QA"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+  "anthropic>=0.20.0",
+  "beautifulsoup4>=4.12.0",
+  "google-generativeai>=0.3.0",
+  "lxml>=4.9.0",
+  "numpy>=1.24.0",
+  "openai>=1.0.0",
+  "python-dotenv>=1.0.0",
+  "pyvi>=0.1.1",
+  "pyyaml>=6.0",
+  "requests>=2.31.0",
+  "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+eval = ["nltk>=3.8.0", "rouge-score>=0.1.2"]
+dev = ["pytest>=8.0.0", "pytest-cov>=5.0.0"]
+
+[project.scripts]
+vipaneltr = "vipaneltr.cli:main"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --tb=short"
