@@ -31,6 +31,3 @@ outputs/*
 .vscode/
 .DS_Store
 Thumbs.db
-
-# Superpower
-docs/superpowers
