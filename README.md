@@ -110,9 +110,6 @@ Table I of the paper are reproduced below.
 
 ```text
 ViPanelTR/
-├── .github/
-│   └── workflows/
-│       └── ci.yml                         # Continuous integration workflow
 ├── data/
 │   └── open_vitabqa/                      # Open-ViTabQA benchmark
 │       ├── LICENSE                        # Dataset license
@@ -327,15 +324,15 @@ License. When using the dataset, cite:
 
 > Dung Hoang Dao, Ngan Thi-Kim Huynh, Khanh Quoc Tran, and Kiet Van Nguyen.
 > “Open-ViTabQA: A novel benchmark for Vietnamese question answering on open
-> domain Wikipedia tables.” *Knowledge-Based Systems* 330 (2025), 114391.
+> domain Wikipedia tables.” _Knowledge-Based Systems_ 330 (2025), 114391.
 > <https://doi.org/10.1016/j.knosys.2025.114391>
 
 ## License
 
-| Component | License and copyright |
-|---|---|
-| `src/vipaneltr/`, `scripts/`, and `tests/` | [MIT License](LICENSE), Copyright © 2026 Nguyen Dinh Khoi |
-| `data/open_vitabqa/` | Governed by its [separate MIT License](data/open_vitabqa/LICENSE) and the dataset authors' copyright |
+| Component                                    | License and copyright                                                                                               |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `src/vipaneltr/`, `scripts/`, and `tests/`   | [MIT License](LICENSE), Copyright © 2026 Nguyen Dinh Khoi                                                           |
+| `data/open_vitabqa/`                         | Governed by its [separate MIT License](data/open_vitabqa/LICENSE) and the dataset authors' copyright                |
 | `docs/paper.pdf` and `imgs/architecture.png` | Copyright © 2026 Nguyen Dinh Khoi, Vo Tuan Kiet, and Dang Van Thin. All rights reserved unless separately permitted |
 
 The paper and architecture image are research artifacts and are **not** covered
