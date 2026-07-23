@@ -1,6 +1,4 @@
-# ViPanelTR
-
-**ViPanelTR: A Multi-Agent Framework for Vietnamese Table Question Answering**
+# ViPanelTR: A Multi-Agent Framework for Vietnamese Table Question Answering
 
 ViPanelTR is a role-specialized multi-agent framework for Vietnamese table
 question answering. It coordinates structural analysis, evidence verification,
